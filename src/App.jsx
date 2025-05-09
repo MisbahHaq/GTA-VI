@@ -63,7 +63,17 @@ function App() {
       {showContent && (
         <div className="main w-full">
           <div className="landing w-full h-screen bg-black">
-            <div className="imagesdiv relative w-full h-screen">
+            <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10">
+              <div className="logo flex gap-7">
+                <div className="lines flex flex-col gap-[5px]">
+                  <div className="line w-15 h-2 bg-white"></div>
+                  <div className="line w-8 h-2 bg-white"></div>
+                  <div className="line w-5 h-2 bg-white"></div>
+                </div>
+                <h3 className="text-4xl -mt-[9px] leading-none text-white">Rockstar</h3>
+              </div>
+            </div>
+            <div className="imagesdiv relative overflow-hidden w-full h-screen">
               <img
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 src="./sky.png"
@@ -74,8 +84,13 @@ function App() {
                 src="./bg.png"
                 alt=""
               />
-              <img className="absolute bottom-0 left-0" src="./girlbg.png" alt="" />
+              <img
+                className="absolute bottom-[-25%] left-1/2 -translate-x-1/2  scale-[1.4]"
+                src="./girlbg.png"
+                alt=""
+              />
             </div>
+            <div className="btmbar absolute bottom-0 left-0 w-full py-10 px=10"></div>
           </div>
         </div>
       )}
